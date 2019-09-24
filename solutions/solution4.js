@@ -1,14 +1,11 @@
 const iceCreamFlavors = window.iceCreamFlavors;
 // DOM manipulation solution
 // create a list item for each iceCreamFlavor using a for loop
-// and append it to the list
+// set the innerHTML in the list as a string
 
 var list = document.getElementsByClassName('ice-cream-list')[0];
 
 for (var i = 0; i < iceCreamFlavors.length; i++) {
-    var listItem = document.createElement('li');
-    listItem.textContent = iceCreamFlavors[i];
-    listItem.classList.add('ice-cream-flavor');
-
-    list.appendChild(listItem);
-}
+    var listItem = iceCreamFlavors[i];
+    list.innerHTML += "<li class=ice-cream-flavor>" + listItem + "</li>";
+};

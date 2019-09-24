@@ -1,14 +1,14 @@
 const iceCreamFlavors = window.iceCreamFlavors;
 // DOM manipulation solution
-// create a list item for each iceCreamFlavor using a for loop
+// create a list item for each iceCreamFlavor using a forEach loop
 // and append it to the list
 
 var list = document.getElementsByClassName('ice-cream-list')[0];
 
-for (var i = 0; i < iceCreamFlavors.length; i++) {
+iceCreamFlavors.forEach(function (iceCreamFlavors) {
     var listItem = document.createElement('li');
-    listItem.textContent = iceCreamFlavors[i];
     listItem.classList.add('ice-cream-flavor');
-
+    listItem.textContent = iceCreamFlavors;
+    
     list.appendChild(listItem);
-}
+});
